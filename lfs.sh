@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-
 export LFS=/mnt/lfs
 export LFS_TGT=arm64-lfs-linux-gnu
 export LFS_DISK=/dev/sda
@@ -27,3 +26,9 @@ mkdir -pv $LFS/var
 case $(uname -m) in
  x86_64) mkdir -pv $LFS/lib64 ;;
 esac
+
+cp -rf *.sh packages.csv "$LFS/sources"
+cd "$LFS/sources"
+export PATH="$LFS/tools/bin:$PATH"
+
+source download.sh
