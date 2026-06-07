@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+log/
+*.log
+
+# Swap and temporary files
+*.swp
+*~
+.DS_Store
+
+# LFS specific
+LFS/
+# If you extract packages locally, you might want to ignore those directories
+# but since they vary by version, it's safer to keep it broad if needed.
